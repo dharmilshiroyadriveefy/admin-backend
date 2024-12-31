@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details - Drivefy</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background-color: #e8f0fe; -webkit-font-smoothing: antialiased;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td style="padding: 40px 10px; text-align: center;">
+                <table role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden;">
+                    <!-- Header with Logo -->
+                    <tr>
+                        <td style="padding: 40px 30px 20px; text-align: center; background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);">
+                            <img src="https://placehold.co/200x60?text=Drivefy" alt="Drivefy Logo" style="max-width: 200px; height: auto; margin-bottom: 20px;">
+                            <h1 style="color: #ffffff; font-size: 28px; margin: 0; font-weight: 600; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);">Customer Details</h1>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td style="padding: 40px 40px;">
+                            <p style="color: #334155; font-size: 16px; line-height: 1.6; margin: 0 0 25px;">
+                                Dear Driveefy Owner,A new customer has registered. Below are the details of the customer:
+                            </p>
+                           
+                            <div style="background-color: #f8fafc; padding: 25px; border-radius: 12px; margin: 25px 0; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                                <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="padding: 8px 0;">
+                                            <strong style="color: #1e40af;">Full Name:</strong>
+                                            <span style="color: #475569; margin-left: 8px;"><%= userName %> </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0;">
+                                            <strong style="color: #1e40af;">Email Address:</strong>
+                                            <span style="color: #475569; margin-left: 8px;"><a href="mailto:<%= email %>" style="text-decoration: none; color: #2563eb;"><%= email %></a></span>
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                        <td style="padding: 8px 0;">
+                                            <strong style="color: #1e40af;">Phone Number:</strong>
+                                            <span style="color: #475569; margin-left: 8px;"><%= phoneNumber %> </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0;">
+                                            <strong style="color: #1e40af;">Description:</strong>
+                                            <span style="color: #475569; margin-left: 8px;"><%= description %> </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                           
+                            <p style="color: #334155; font-size: 16px; line-height: 1.6; margin: 25px 0;">
+                                Best regards,<br>Driveefy Team
+                            </p>
+                        </td>
+                    </tr>
+                   
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #1e3a8a; border-radius: 0 0 16px 16px;">
+                            <p style="color: #e2e8f0; font-size: 13px; margin: 0; text-align: center; line-height: 1.6;">
+                                This is an automated message from Drivefy. Please do not reply to this email.<br>
+                                © 2024 Drivefy. All rights reserved.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
