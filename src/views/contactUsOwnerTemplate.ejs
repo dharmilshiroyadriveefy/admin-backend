@@ -14,15 +14,15 @@
                     <tr>
                         <td style="padding: 40px 30px 20px; text-align: center; background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);">
                             <img src="https://placehold.co/200x60?text=Drivefy" alt="Drivefy Logo" style="max-width: 200px; height: auto; margin-bottom: 20px;">
-                            <h1 style="color: #ffffff; font-size: 28px; margin: 0; font-weight: 600; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);">Customer Details</h1>
+                            <h1 style="color: #ffffff; font-size: 28px; margin: 0; font-weight: 600; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);">Customer and Ticket Details</h1>
                         </td>
                     </tr>
                    
                     <tr>
-                        <td style="padding: 40px 40px;">
-                            <p style="color: #334155; font-size: 16px; line-height: 1.6; margin: 0 0 25px;">
-                                Dear Driveefy Owner,A new customer has registered. Below are the details of the customer:
-                            </p>
+                        <td style="padding: 40px 40px; text-align: left;">
+                            <p style="color: #475569; margin: 0;">Hello Team Driveefy,</p>
+                            <p style="color: #475569; margin-top: 10px;">We are excited to inform you that a customer has successfully generated a ticket on your platform. Below are the details of the customer for your reference:</p>
+                            
                            
                             <div style="background-color: #f8fafc; padding: 25px; border-radius: 12px; margin: 25px 0; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
                                 <table role="presentation" style="width: 100%; border-collapse: collapse;">
@@ -50,11 +50,23 @@
                                             <span style="color: #475569; margin-left: 8px;"><%= description %> </span>
                                         </td>
                                     </tr>
+                                     <tr>
+                                        <td style="padding: 8px 0;">
+                                            <strong style="color: #1e40af;">UniqueId::</strong>
+                                            <span style="color: #475569; margin-left: 8px;"><%= uniqueId %> </span>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td style="padding: 8px 0;">
+                                            <strong style="color: #1e40af;">Status:</strong>
+                                            <span style="color: #475569; margin-left: 8px;"><%= mailSendStatus %> </span>
+                                        </td>
+                                    </tr>
                                 </table>
                             </div>
                            
                             <p style="color: #334155; font-size: 16px; line-height: 1.6; margin: 25px 0;">
-                                Best regards,<br>Driveefy Team
+                                Best regards,<br>Driveefy Team<br>support@teamDriveefy.com
                             </p>
                         </td>
                     </tr>

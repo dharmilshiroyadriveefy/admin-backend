@@ -3,11 +3,11 @@ const { AppError } = require("../utils/common");
 const { StatusCodes } = require("http-status-codes");
 
 const sendEmailCustomer = async (Customer) => {
-    const subject = " Ticket has been railsed for query";
+    const subject = " Ticket Raised for Query Assistance";
     const template = "contactUsUserTemplate";
     const context = {
         userName: `${Customer.firstName} ${Customer.lastName}`,
-        UniqueId: Customer.UniqueId,
+        uniqueId: Customer.uniqueId,
     };
 
     try {
@@ -20,7 +20,7 @@ const sendEmailCustomer = async (Customer) => {
 };
 
 const sendEmailOwner = async (ownerEmail, Customer) => {
-    const subject = "Query Raised";
+    const subject = "New Ticket Raised for Query Assistance";
     const template = "contactUsOwnerTemplate";
     const context = {
         userName:`${Customer.firstName} ${Customer.lastName}`,
@@ -37,7 +37,25 @@ const sendEmailOwner = async (ownerEmail, Customer) => {
     }
 };
 
+const successfulClosureMail = async (ticket) => {
+    const subject = ` Your Ticket Has Been Closed`;
+    const template = "successfulTicketResolved";
+    console.log(ticket)
+    const context = {
+        uniqueId:ticket.uniqueId,
+        userName: `${ticket.firstName} ${ticket.lastName}`,
+        
+    };
+    try {
+        await SendEmail.sendEmail(ticket.email, subject, template, context);
+    } catch (error) {
+        console.log(error)
+        throw new AppError("Error occurred while sending email to cutomer", StatusCodes.INTERNAL_SERVER_ERROR);
+    }
+};
+
 module.exports = {
   sendEmailCustomer,
-  sendEmailOwner
+  sendEmailOwner,
+  successfulClosureMail
 };

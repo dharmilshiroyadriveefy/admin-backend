@@ -5,7 +5,7 @@ const { ContactUsController } = require("../../controllers");
 const { ContactUsInquiriesMiddlewar } = require("../../middlewares");
 
 router.post(
-    "/registerCustomer",
+    "/registercustomer",
     ContactUsInquiriesMiddlewar.validatecustomerRegisteration,
     ContactUsController.createTicket
 );

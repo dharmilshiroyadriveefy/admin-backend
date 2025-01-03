@@ -26,7 +26,45 @@ async function updateTicketStatus(req, res) {
         return res.status(StatusCodes.BAD_REQUEST).json(ErrorResponse);
     }
 }
+async function getTicketDetails(req,res) {
+    try {
+        const user = await AdminTicketService.getTicketDetails(req);
+        SuccessResponse.data = user;
+        return res.status(StatusCodes.OK).json(SuccessResponse);
+    }
+    catch (error) {
+        console.log(error)
+        ErrorResponse.error = error;
+        return res.status(StatusCodes.BAD_REQUEST).json(ErrorResponse);
+    }
+    
+}
+
+async function searchTicket(req,res) {
+    try {
+        const user = await AdminTicketService.searchTicket(req);
+        SuccessResponse.data = user;
+        return res.status(StatusCodes.OK).json(SuccessResponse);
+    }
+    catch (error) {
+        console.log(error)
+        ErrorResponse.error = error;
+        return res.status(StatusCodes.BAD_REQUEST).json(ErrorResponse);
+    }
+    
+}
+async function successfulClosuer(req, res) {
+    try {
+        const result = await AdminTicketService.successfulClosuer(req);
+        SuccessResponse.data = result;
+        return res.status(StatusCodes.OK).json(SuccessResponse);
+    }
+    catch (error) {
+        ErrorResponse.error = error;
+        return res.status(StatusCodes.BAD_REQUEST).json(ErrorResponse);
+    }
+}
 
 
 
-module.exports = {  getTicketsList,updateTicketStatus };
+module.exports = {  getTicketsList,updateTicketStatus,getTicketDetails,searchTicket,successfulClosuer };
